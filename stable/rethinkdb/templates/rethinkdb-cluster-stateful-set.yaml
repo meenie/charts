@@ -38,6 +38,10 @@ spec:
             - "--no-http-admin"
             - "--cache-size"
             - {{ .Values.cluster.rethinkCacheSize | quote }}
+            {{- if .Values.cluster.rethinkCores }}
+            - "--cores"
+            - {{ .Values.cluster.rethinkCores | quote }}
+            {{- end }}
           volumeMounts:
             - name: "datadir"
               mountPath: "/data"

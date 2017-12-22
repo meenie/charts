@@ -32,6 +32,8 @@ cluster:
     annotations: {}
   # RethinkDB Cache Size in MB
   rethinkCacheSize: 100
+  # RethinkDB Number of cores to use
+  # rethinkCores: 1
 
 # RethinkDB Proxy Config
 proxy:

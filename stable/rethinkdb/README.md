@@ -48,6 +48,7 @@ Parameter | Description | Default
 `cluster.persistentVolume.size` | Persistent volume size | `10Gi`
 `cluster.persistentVolume.annotations` | Persistent volume annotations | `{}`
 `cluster.rethinkCacheSize` | RethinkDB `cache-size` value in MB | `100`
+`cluster.rethinkCores` | RethinkDB Number of cores to use. **Note**: If not set, RethinkDB defaults to the number of CPU cores available | `undefined`
 `proxy.replicas` | Number of RethinkDB Proxy replicas | `1`
 `proxy.resources` | Resource configuration for each RethinkDB Proxy Pod | `{}`
 `proxy.podAnnotations` | Annotations to be added to RethinkDB Proxy Pods | `{}`
