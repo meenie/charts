@@ -10,6 +10,10 @@ metadata:
 spec:
   serviceName: "{{ template "rethinkdb.fullname" . }}-cluster"
   replicas: {{ .Values.cluster.replicas }}
+  {{- if .Values.cluster.updateStrategy }}
+  updateStrategy:
+    {{ toYaml .Values.cluster.updateStrategy }}
+  {{- end }}
   template:
     metadata:
       name: "{{ template "rethinkdb.fullname" . }}-cluster"

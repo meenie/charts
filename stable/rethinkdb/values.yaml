@@ -35,6 +35,10 @@ cluster:
   # RethinkDB Number of cores to use
   # rethinkCores: 1
 
+  # StatefulSets Update Strategies (https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies)
+  # updateStrategy:
+  #   type: OnDelete
+
 # RethinkDB Proxy Config
 proxy:
   replicas: 1

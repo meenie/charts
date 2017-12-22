@@ -1,7 +1,7 @@
 # RethinkDB 2.3.5 Helm Chart
 
 ## Prerequisites Details
-* Kubernetes 1.5+ with Beta APIs enabled.
+* Kubernetes 1.7 (for `updateStrategy` support)
 * PV support on the underlying infrastructure.
 
 ## StatefulSet Details
@@ -49,6 +49,7 @@ Parameter | Description | Default
 `cluster.persistentVolume.annotations` | Persistent volume annotations | `{}`
 `cluster.rethinkCacheSize` | RethinkDB `cache-size` value in MB | `100`
 `cluster.rethinkCores` | RethinkDB Number of cores to use. **Note**: If not set, RethinkDB defaults to the number of CPU cores available | `undefined`
+`cluster.updateStrategy` | Define StatefulSets Update Stragegy. **Note**: Needs to k8s 1.7+ | `undefined`
 `proxy.replicas` | Number of RethinkDB Proxy replicas | `1`
 `proxy.resources` | Resource configuration for each RethinkDB Proxy Pod | `{}`
 `proxy.podAnnotations` | Annotations to be added to RethinkDB Proxy Pods | `{}`
