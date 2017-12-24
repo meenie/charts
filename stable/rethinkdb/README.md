@@ -39,11 +39,8 @@ Parameter | Description | Default
 `cluster.resources` | Resource configuration for each RethinkDB Cluster Pod | `{}`
 `cluster.podAnnotations` | Annotations to be added to RethinkDB Cluster Pods | `{}`
 `cluster.service.annotations` | Annotations to be added to RethinkDB Cluster Service | `{}`
-`cluster.storageClass.enabled` | If `true`, create a StorageClass for the cluster. **Note**: You must set a provisioner | `false`
-`cluster.storageClass.provisioner` | Provisioner definition for StorageClass | `undefined`
-`cluster.storageClass.parameters` | Parameters for StorageClass | `undefined`
 `cluster.persistentVolume.enabled` | If `true`, persistent volume claims are created | `true`
-`cluster.persistentVolume.storageClass` | Persistent volume storage class | `default`
+`cluster.persistentVolume.storageClassName` | Persistent volume storage class name. **Note**: If set to `-` it will set the key with a blank value. | `undefined`
 `cluster.persistentVolume.accessMode` | Persistent volume access modes | `[ReadWriteOnce]`
 `cluster.persistentVolume.size` | Persistent volume size | `10Gi`
 `cluster.persistentVolume.annotations` | Persistent volume annotations | `{}`
