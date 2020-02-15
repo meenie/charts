@@ -1,7 +1,7 @@
 # Specs for the RethinkDB image
 image:
   name: codylundquist/helm-rethinkdb-cluster
-  tag: 0.2.0
+  tag: 2.4.0
   pullPolicy: IfNotPresent
 
 # RethinkDB Cluster Config
@@ -69,7 +69,9 @@ proxy:
   service:
     annotations: {}
     type: ClusterIP
-    clusterIP: ""
+    omitClusterIP: true
+    # clusterIP: ""
+
     # List of IP addresses at which the proxy service is available
     # Ref: https://kubernetes.io/docs/concepts/services-networking/service/#external-ips
     #
@@ -91,6 +93,7 @@ proxy:
 ports:
   cluster: 29015
   driver: 28015
+  secdriver: 28016
   admin: 8080
 
 # RethinkDB Admin Password
